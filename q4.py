@@ -21,5 +21,7 @@ b3 = B[1] + C[1] - A[1]
 D[1] = min(b1,b2,b3)
 
 
-print("Coordinates of D: ", D)
-
+print("Lexicographically smallest coordinates of D: ", D)
+print("Other coordinates of D: ", a1,b1)
+print("Other coordinates of D: ", a2,b2)
+print("Other coordinates of D: ", a3,b3)
