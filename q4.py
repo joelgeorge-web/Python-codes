@@ -6,6 +6,12 @@ A = list(map(int, input("Enter the coordinates of A: ").split()))
 B = list(map(int, input("Enter the coordinates of B: ").split()))
 C = list(map(int, input("Enter the coordinates of C: ").split()))
 
+#D1 = (A[0] + C[0] - B[0], A[1] + C[1] - B[1])
+#D2 = (A[0] + B[0] - C[0], A[1] + B[1] - C[1])
+#D3 = (B[0] + C[0] - A[0], B[1] + C[1] - A[1])
+#print(min(D1,D2,D3))
+
+
 D = [0,0]
 
 a1 = A[0] + C[0] - B[0]
