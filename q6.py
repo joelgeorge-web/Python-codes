@@ -14,16 +14,19 @@ K = arr[1]
 diff = []
 rang = 0
 dogs = list(map(int, input("Enter sizes of dogs: ").split()))
-n = len(dogs)
-dogs.sort()
-range1 = dogs[n-1] - dogs[0]
-for i in range(n-1):
-    a = dogs[i+1]-dogs[i]
-    diff.append(a)
-diff.sort(reverse=True)
-print(diff)
-rang = range1 - sum(diff[0:K-1])
-print(rang)
+def dog(N,K,dogs):
+    n = len(dogs)
+    dogs.sort()
+    range1 = dogs[n-1] - dogs[0] #range if all dogs are walked by one person
+    for i in range(n-1):
+        a = dogs[i+1]-dogs[i]
+        diff.append(a)
+    diff.sort(reverse=True)
+    print(diff)
+    rang = range1 - sum(diff[0:K-1])
+    
+    return rang
 
+print(dog(N,K,dogs))
 
 
