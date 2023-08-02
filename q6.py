@@ -8,12 +8,7 @@
 #https://medium.com/xtremefun/xtreme-10-0-walking-dogs-4bd783e4b114
 
 
-arr = list(map(int, input("Enter no of dogs and dog walkers: ").split()))
-N = arr[0]
-K = arr[1]
-diff = []
-rang = 0
-dogs = list(map(int, input("Enter sizes of dogs: ").split()))
+
 def dog(N,K,dogs):
     n = len(dogs)
     dogs.sort()
@@ -27,6 +22,14 @@ def dog(N,K,dogs):
     
     return rang
 
-print(dog(N,K,dogs))
 
+testcases = int(input("Enter no of testcases: "))
+for i in range (testcases):
+    arr = list(map(int, input("Enter no of dogs and dog walkers: ").split()))
+    N = arr[0]
+    K = arr[1]
+    diff = []
+    rang = 0
+    dogs = list(map(int, input("Enter sizes of dogs: ").split()))
+    print(dog(N,K,dogs))
 
