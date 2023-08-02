@@ -2,3 +2,5 @@
 #you have a machine thats able to count the number of atoms of carbon, hydrogen, and oxygen in a given sample.
 
 
+arr = list(map(int, input("Enter no of molecules: ").split()))
+print(arr)
