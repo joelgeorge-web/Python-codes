@@ -5,11 +5,9 @@
 arr = list(map(int, input("Enter the array: ").split()))
 n = len(arr)
 count = 0
-
-for i in range(n):
-    for j in range(n):
-        if arr[i] == arr[j]:
-            count = count + 1
-    if count > n/2:
-        print(arr[i])
-        break
+element = 0
+for i in arr:
+    if(arr.count(i)>count) and (arr.count(i)>n//2):
+        count = arr.count(i)
+        element = i
+print(element)
