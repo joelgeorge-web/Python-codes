@@ -19,12 +19,12 @@ def dog(N,K,dogs):
     diff.sort(reverse=True)
     print(diff)
     rang = range1 - sum(diff[0:K-1])
-    
+
     return rang
 
 
 testcases = int(input("Enter no of testcases: "))
-for i in range (testcases):
+while testcases:
     arr = list(map(int, input("Enter no of dogs and dog walkers: ").split()))
     N = arr[0]
     K = arr[1]
@@ -32,4 +32,5 @@ for i in range (testcases):
     rang = 0
     dogs = list(map(int, input("Enter sizes of dogs: ").split()))
     print(dog(N,K,dogs))
+    testcases -= 1
 
