@@ -17,6 +17,9 @@
 # eqn2 gives us w = (h - 12g)/2
 # Substituting in eqn3 we get g = (2o -4c - 2h)/2
 
+g = 0
+x = 0
+w = 0
 
 
 
