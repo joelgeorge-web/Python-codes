@@ -40,8 +40,8 @@ elif arr[0] == 0 and arr[1] != 0:
         print("invalid")
 elif arr[0] !=0 and arr[1] != 0 and arr[2] != 0:
     g = abs(2*arr[2] - 4*arr[0] - 2*arr[1])/2
-    x = arr[0] - 6*g
-    w = (arr[1] - 12*g)/2
+    x = abs(arr[0] - 6*g)
+    w = abs((arr[1] - 12*g)/2)
     if g < 0 and x < 0 and w < 0:
         print("invalid")
     else:
