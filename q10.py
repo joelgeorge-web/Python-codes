@@ -3,17 +3,20 @@
 
 def subArraySum(arr, n, sum):
     count = 0
-    i = 0
-    while i < n:
-        curr_sum = 0
-        j = i
-        while j < n:
-            curr_sum += arr[j]
-            if curr_sum == sum:
-                count += 1
-            j += 1
-        i += 1
+    cum_sum = 0
+    sum_dict = {}
+    for i in range(n):
+        cum_sum += arr[i]
+        if cum_sum == sum:
+            count += 1
+        if (cum_sum - sum) in sum_dict:
+            count += sum_dict[cum_sum - sum]
+        if cum_sum in sum_dict:
+            sum_dict[cum_sum] += 1
+        else:
+            sum_dict[cum_sum] = 1
     return count
+
 
 
 
