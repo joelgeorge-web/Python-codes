@@ -4,21 +4,13 @@
 
 
 def coinChange(coins, amount):
-    coins.sort(reverse=True)
-    count = 0
-    a = 0
-    if amount<coins[0]:
-        while amount>=count:
-            coins[0]+=coins[0]
-            a+=1
-            if(amount-count<coins[0]):
-                coins.pop(0)
-                a-=1
-        
-    else:
-        return -1
+    dp = [amount + 1] * (amount + 1)
+    dp[0] = 0
+    for coin in coins:
+        for i in range(coin, amount + 1):
+            dp[i] = min(dp[i], dp[i - coin] + 1)
+    return -1 if dp[amount] > amount else dp[amount]
 
-    return a
 
 testcases = int(input("Enter no of testcases: "))
 while testcases:
