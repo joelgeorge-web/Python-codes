@@ -24,27 +24,16 @@ w = 0
 
 
 arr = list(map(int, input("Enter no of c h and o: ").split()))
+c = arr[0]
+h = arr[1]
+o = arr[2]
 print(arr)
-
-#CO2 molecules only if h = 0
-if arr[1] == 0 and arr[0] != 0:
-    if 2*arr[0] == arr[2]:
-        print("No of CO2 molecules: ",arr[0])
-    else:
-        print("invalid")
-#H2O molecules
-elif arr[0] == 0 and arr[1] != 0:
-    if arr[1] == 2*arr[2]:
-        print("H2O: ", arr[2])
-    else:
-        print("invalid")
-elif arr[0] !=0 and arr[1] != 0 and arr[2] != 0:
-    g = abs(2*arr[2] - 4*arr[0] - 2*arr[1])/2
-    x = abs(arr[0] - 6*g)
-    w = abs((arr[1] - 12*g)/2)
-    if g < 0 and x < 0 and w < 0:
-        print("invalid")
-    else:
-        print("No of glucose molecules: ", g)
-        print("No of carbon dioxide molecules: ", x)
-        print("No of water molecules: ", w)
+g = o + c - 2*h/2
+x = c - 6*g
+w = (h - 12*g)/2
+if g < 0 or x < 0 or w < 0:
+    print("invalid")
+else:
+    print("No of glucose molecules: ", g//6)
+    print("No of carbon dioxide molecules: ", x//1)
+    print("No of water molecules: ", w//2)
