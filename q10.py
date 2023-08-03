@@ -1,16 +1,6 @@
 #Given an unsorted array of integers, find the number of continuous subarrays having sum exactly equal to a given number k.
 
 
-# def subArraySum(arr, n, sum):
-#     count = 0
-#     for i in range(n):
-#         curr_sum = 0
-#         for j in range(i, n):
-#             curr_sum += arr[j]
-#             if curr_sum == sum:
-#                 count += 1
-#     return count
-
 def subArraySum(arr, n, sum):
     count = 0
     i = 0
