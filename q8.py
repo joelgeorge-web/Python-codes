@@ -4,12 +4,13 @@
 
 
 def coinChange(coins, amount):
-    dp = [amount + 1] * (amount + 1)
+    dp = [float('inf')] * (amount + 1)
     dp[0] = 0
     for coin in coins:
-        for i in range(coin, amount + 1):
-            dp[i] = min(dp[i], dp[i - coin] + 1)
-    return -1 if dp[amount] > amount else dp[amount]
+        for x in range(coin, amount + 1):
+            dp[x] = min(dp[x], dp[x - coin] + 1)
+    return dp[amount] if dp[amount] != float('inf') else -1
+
 
 
 testcases = int(input("Enter no of testcases: "))
