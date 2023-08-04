@@ -17,23 +17,16 @@
 # eqn2 gives us w = (h - 12g)/2
 # Substituting in eqn3 we get g = (2o -4c - 2h)/2
 
-g = 0
-x = 0
-w = 0
+def num_molecules(c_atoms, h_atoms, o_atoms):
+    water_molecules = h_atoms // 2
+    co2_molecules = c_atoms
+    glucose_molecules = c_atoms // 6
+    total_molecules = water_molecules + co2_molecules + glucose_molecules
+    return total_molecules
+
 
 
 
 arr = list(map(int, input("Enter no of c h and o: ").split()))
-c = arr[0]
-h = arr[1]
-o = arr[2]
-print(arr)
-g = o + c - 2*h/2
-x = c - 6*g
-w = (h - 12*g)/2
-if g < 0 or x < 0 or w < 0:
-    print("invalid")
-else:
-    print("No of glucose molecules: ", g//6)
-    print("No of carbon dioxide molecules: ", x//1)
-    print("No of water molecules: ", w//2)
+
+print(num_molecules(arr[0], arr[1], arr[2]))
