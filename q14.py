@@ -1,4 +1,9 @@
-#rat and maze problem
+# Rat in a Maze
+# This is a Python program that solves the "Rat in a Maze" problem using backtracking.
+#Problem Description
+#In the "Rat in a Maze" problem, there is a maze represented as a 2D array of 0s and 1s, where 0 represents a blocked cell and 1 represents an open cell. The rat starts at the top left corner of the maze (cell [0,0]) and must find its way to the bottom right corner (cell [n-1,n-1]).
+#The rat can only move in two directions: down and right. The goal is to find a path from the start to the end of the maze, if one exists.
+
 
 def ratMaze(maze):
     n = len(maze)
@@ -43,4 +48,3 @@ if __name__ == "__main__":
             [1, 1, 1, 1]]
     ratMaze(maze)
 
-    
